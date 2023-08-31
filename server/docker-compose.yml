@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  node-app:
+    build: .
+    image: ve-server
+
+    ports:
+      - '5000:5000'
+
+    volumes:
+      - .:/usr/src/node-app
+
+    network_mode: 'host'
+
+volumes:
+  dbdata:
+
+networks:
+  node-network:
+    driver: bridge
