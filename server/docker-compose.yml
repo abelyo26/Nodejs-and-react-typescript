@@ -3,7 +3,7 @@ version: '3'
 services:
   node-app:
     build: .
-    image: ve-server
+    image: server
 
     ports:
       - '5000:5000'

@@ -2,5 +2,5 @@ version: '3'
 
 services:
   node-app:
-    container_name: ve-server-test
+    container_name: server-test
     command: yarn test
