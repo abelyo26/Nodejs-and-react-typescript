@@ -2,12 +2,24 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "lint:vite": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "yarn run eslint src",
+    "lint:fix": "yarn run eslint --fix src",
+    "lint:css": "stylelint src/**/*.css",
+    "preview": "vite preview",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start:prod": "yarn run build && serve -s build",
+    "test:generators": "ts-node ./internals/testing/generators/test-generators.ts",
+    "checkTs": "tsc --noEmit",
+    "eslint": "eslint --ext js,ts,tsx",
+    "generate": "plop --plopfile internals/generators/plopfile.ts",
+    "prettify": "prettier --write",
+    "extract-messages": "i18next-scanner --config=internals/extractMessages/i18next-scanner.config.js",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
