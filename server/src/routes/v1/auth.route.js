@@ -1,9 +1,6 @@
-/* eslint-disable import/no-named-as-default-member */
-/* eslint-disable import/named */
 import express from 'express';
 import validate from '../../middlewares/validate';
 import * as authValidation from '../../validations/auth.validation';
-// import authController from '../../controllers/auth.controller';
 import * as authController from '../../controllers/auth.controller';
 import auth from '../../middlewares/auth';
 

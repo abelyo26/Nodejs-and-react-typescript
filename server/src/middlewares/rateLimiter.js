@@ -1,4 +1,3 @@
-// const rateLimit = require('express-rate-limit');
 import rateLimit from 'express-rate-limit';
 
 const authLimiter = rateLimit({

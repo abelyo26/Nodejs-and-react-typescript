@@ -1,7 +1,10 @@
 /* eslint-disable import/named */
 import httpStatus from 'http-status';
 import catchAsync from '../utils/catchAsync';
-import { authService, userService, tokenService, emailService } from '../services';
+import * as tokenService from '../services/token.service';
+import * as userService from '../services/user.service';
+import * as authService from '../services/auth.service';
+import * as emailService from '../services/email.service';
 
 export const register = catchAsync(async (req, res) => {
   const user = await userService.createUser(req.body);

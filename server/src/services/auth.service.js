@@ -1,12 +1,6 @@
-// const httpStatus = require('http-status');
-// const tokenService = require('./token.service');
-// const userService = require('./user.service');
-// const Token = require('../models/token.model');
-// const ApiError = require('../utils/ApiError');
-// const { tokenTypes } = require('../config/tokens');
 import httpStatus from 'http-status';
-import tokenService from './token.service';
-import userService from './user.service';
+import * as tokenService from './token.service';
+import * as userService from './user.service';
 import Token from '../models/token.model';
 import ApiError from '../utils/ApiError';
 import { tokenTypes } from '../config/tokens';
