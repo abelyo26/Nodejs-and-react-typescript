@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import mongoose from 'mongoose';
 import validator from 'validator';
 import bcrypt from 'bcryptjs';
@@ -87,6 +88,4 @@ userSchema.pre('save', async function (next) {
 /**
  * @typedef User
  */
-const User = mongoose.model('User', userSchema);
-
-export default User;
+export const User = mongoose.model('User', userSchema);

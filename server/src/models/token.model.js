@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import mongoose from 'mongoose';
 import toJSON from './plugins/toJSON.plugin';
 import { tokenTypes } from '../config/tokens';
@@ -39,6 +40,4 @@ tokenSchema.plugin(toJSON);
 /**
  * @typedef Token
  */
-const Token = mongoose.model('Token', tokenSchema);
-
-export default Token;
+export const Token = mongoose.model('Token', tokenSchema);
