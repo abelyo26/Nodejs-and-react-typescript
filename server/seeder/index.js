@@ -22,7 +22,7 @@ async function seedData() {
   const insertPromises = files.map(async (file) => {
     logger.info(`seeding ${file}`);
     const data = require(join(__dirname, file)).default;
-    await models[file.replace('.js', '')].insertMany(data);
+    await models[file.replace('.js', '')].create(data);
   });
 
   try {
